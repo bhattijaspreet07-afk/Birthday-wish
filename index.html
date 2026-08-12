@@ -903,11 +903,12 @@ function startBirthday(){
        Therefore browsers allow the music.
     */
 
-    music.volume = 1.0;
+   music.volume = 1.0;
+music.muted = false;
 
-    music.currentTime = 0;
+music.currentTime = 0;
 
-    music.play()
+music.play()
     .then(function(){
 
         musicButton.style.display = "block";
@@ -960,58 +961,21 @@ function startBirthday(){
 
 function toggleMusic(){
 
-    /*
-       MUSIC IS CURRENTLY PLAYING
-    */
+    if(music.muted === false){
 
-    if(!music.paused){
+        // MUTE — music keeps playing
+        music.muted = true;
 
-        /* STOP IMMEDIATELY */
-
-        music.pause();
-
-        music.currentTime = 0;
-
-        musicButton.innerHTML =
-            "🔇 Music OFF";
-
-        musicButton.dataset.playing =
-            "false";
+        musicButton.innerHTML = "🔇 Music OFF";
 
     }
 
-    /*
-       MUSIC IS CURRENTLY OFF
-    */
-
     else{
 
-        music.currentTime = 0;
+        // UNMUTE — continues from the same position
+        music.muted = false;
 
-        music.volume = 1.0;
-
-        music.play()
-        .then(function(){
-
-            musicButton.innerHTML =
-                "🎵 Music ON";
-
-            musicButton.dataset.playing =
-                "true";
-
-        })
-        .catch(function(error){
-
-            console.log(
-                "Could not play music:",
-                error
-            );
-
-            alert(
-                "Music could not start. Please click the button again."
-            );
-
-        });
+        musicButton.innerHTML = "🎵 Music ON";
 
     }
 
