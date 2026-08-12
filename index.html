@@ -895,63 +895,27 @@ document.getElementById("musicButton");
 
 function startBirthday(){
 
-    /*
-       IMPORTANT:
-       This function is called directly
-       when the user clicks the button.
+    music.currentTime = 0;
+    music.muted = false;
+    music.volume = 1.0;
 
-       Therefore browsers allow the music.
-    */
-
-   music.volume = 1.0;
-music.muted = false;
-
-music.currentTime = 0;
-
-music.play()
+    music.play()
     .then(function(){
 
         musicButton.style.display = "block";
-
-        musicButton.innerHTML =
-            "🎵 Music ON";
-
-        musicButton.dataset.playing =
-            "true";
+        musicButton.innerHTML = "🎵 Music ON";
 
     })
     .catch(function(error){
 
-        console.log(
-            "Audio error:",
-            error
-        );
-
-        musicButton.style.display =
-            "block";
-
-        musicButton.innerHTML =
-            "▶️ Play Music";
+        console.log("Music error:", error);
 
     });
 
-
-    /* Hide intro */
-
-    document.getElementById("intro")
-    .style.display = "none";
-
-
-    /* Show website */
-
-    document.getElementById("main")
-    .style.display = "block";
-
-
-    /* Confetti */
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("main").style.display = "block";
 
     createConfetti(120);
-
 }
 
 
@@ -959,26 +923,22 @@ music.play()
    MUSIC ON / OFF
 ========================================== */
 
-function toggleMusic(){
+function toggleMusic() {
 
-    if(music.muted === false){
+    if (music.muted) {
 
-        // MUTE — music keeps playing
-        music.muted = true;
-
-        musicButton.innerHTML = "🔇 Music OFF";
-
-    }
-
-    else{
-
-        // UNMUTE — continues from the same position
+        // UNMUTE — continue from current position
         music.muted = false;
 
         musicButton.innerHTML = "🎵 Music ON";
 
-    }
+    } else {
 
+        // MUTE — music CONTINUES playing
+        music.muted = true;
+
+        musicButton.innerHTML = "🔇 Music OFF";
+    }
 }
 
 
