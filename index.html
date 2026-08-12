@@ -44,6 +44,7 @@ body::before{
 }
 
 /* INTRO */
+
 #intro{
     min-height:100vh;
     display:flex;
@@ -88,7 +89,6 @@ body::before{
     margin-bottom:30px;
 }
 
-/* BUTTON */
 button{
     border:none;
     padding:15px 30px;
@@ -107,6 +107,7 @@ button:hover{
 }
 
 /* MUSIC BUTTON */
+
 .music-control{
     position:fixed;
     right:20px;
@@ -117,10 +118,11 @@ button:hover{
     display:none;
 }
 
-/* MAIN */
 .hidden{
     display:none;
 }
+
+/* HERO */
 
 .hero{
     min-height:100vh;
@@ -162,6 +164,7 @@ button:hover{
 }
 
 /* SECTIONS */
+
 .section{
     padding:100px 20px;
     max-width:1100px;
@@ -174,7 +177,8 @@ button:hover{
     margin-bottom:40px;
 }
 
-/* CODE */
+/* CODE CARD */
+
 .code-card{
     max-width:800px;
     margin:auto;
@@ -218,6 +222,7 @@ button:hover{
 .orange{color:#fbbf24;}
 
 /* CARDS */
+
 .wish-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -254,6 +259,7 @@ button:hover{
 }
 
 /* HEIGHT JOKE */
+
 .height-joke{
     margin:40px auto;
     max-width:650px;
@@ -270,11 +276,16 @@ button:hover{
 }
 
 /* MESSAGE */
+
 .message-card{
     position:relative;
     padding:60px;
     border-radius:30px;
-    background:linear-gradient(135deg,rgba(255,79,163,.08),rgba(139,92,246,.08));
+    background:linear-gradient(
+        135deg,
+        rgba(255,79,163,.08),
+        rgba(139,92,246,.08)
+    );
     border:1px solid #302d52;
     text-align:center;
 }
@@ -302,6 +313,7 @@ button:hover{
 }
 
 /* CAKE */
+
 .cake-section{
     text-align:center;
 }
@@ -375,6 +387,7 @@ button:hover{
 }
 
 /* FINAL */
+
 .final-section{
     min-height:100vh;
     display:flex;
@@ -429,6 +442,7 @@ button:hover{
 }
 
 /* CONFETTI */
+
 .confetti{
     position:fixed;
     width:10px;
@@ -439,11 +453,13 @@ button:hover{
 }
 
 /* ANIMATIONS */
+
 @keyframes fadeUp{
     from{
         opacity:0;
         transform:translateY(30px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
@@ -452,36 +468,62 @@ button:hover{
 
 @keyframes glow{
     from{
-        filter:drop-shadow(0 0 10px rgba(255,79,163,.2));
+        filter:drop-shadow(
+            0 0 10px
+            rgba(255,79,163,.2)
+        );
     }
+
     to{
-        filter:drop-shadow(0 0 30px rgba(255,79,163,.5));
+        filter:drop-shadow(
+            0 0 30px
+            rgba(255,79,163,.5)
+        );
     }
 }
 
 @keyframes bounce{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(10px);}
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(10px);
+    }
 }
 
 @keyframes flicker{
-    from{transform:scale(1);}
-    to{transform:scale(1.15);}
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.15);
+    }
 }
 
 @keyframes heartbeat{
-    0%,100%{transform:scale(1);}
-    50%{transform:scale(1.15);}
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.15);
+    }
 }
 
 @keyframes fall{
     to{
-        transform:translateY(110vh) rotate(720deg);
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
         opacity:0;
     }
 }
 
 @media(max-width:700px){
+
     .wish-grid{
         grid-template-columns:1fr;
     }
@@ -515,12 +557,31 @@ button:hover{
 
 <div class="stars"></div>
 
-<!-- MUSIC CONTROL -->
-<button class="music-control" id="musicButton" onclick="toggleMusic()">
-🎵 Music ON
+
+<!-- REAL BIRTHDAY MUSIC -->
+
+<audio
+    id="birthdayMusic"
+    src="birthday.mp3"
+    preload="auto"
+    loop>
+</audio>
+
+
+<!-- MUSIC BUTTON -->
+
+<button
+    class="music-control"
+    id="musicButton"
+    onclick="toggleMusic()">
+
+    🎵 Music ON
+
 </button>
 
+
 <!-- INTRO -->
+
 <section id="intro">
 
 <div class="intro-content">
@@ -541,7 +602,7 @@ Hello,
 > searching for best friend...<br>
 > Aanya found! 💗<br>
 > preparing surprise...<br>
-> music system ready... 🎵
+> birthday music loaded... 🎵
 
 </div>
 
@@ -554,8 +615,10 @@ Click to Continue ✨
 </section>
 
 
-<!-- MAIN -->
+<!-- MAIN WEBSITE -->
+
 <main id="mainContent" class="hidden">
+
 
 <section class="hero">
 
@@ -583,7 +646,8 @@ still shorter than me. 😂❤️
 </section>
 
 
-<!-- CSE CODE -->
+<!-- CSE SECTION -->
+
 <section class="section">
 
 <div class="code-card">
@@ -604,13 +668,17 @@ still shorter than me. 😂❤️
 <p class="indent">
 <span class="purple">String</span>
 name =
-<span class="green">"Aanya Singh"</span>;
+<span class="green">
+"Aanya Singh"
+</span>;
 </p>
 
 <p class="indent">
 <span class="purple">String</span>
 height =
-<span class="green">"Still Smaller Than Jaspreet 😂"</span>;
+<span class="green">
+"Still Smaller Than Jaspreet 😂"
+</span>;
 </p>
 
 <p class="indent">
@@ -622,19 +690,25 @@ happiness =
 <p class="indent">
 <span class="purple">String</span>
 problems =
-<span class="green">"404 Not Found"</span>;
+<span class="green">
+"404 Not Found"
+</span>;
 </p>
 
 <p class="indent">
 <span class="purple">String</span>
 future =
-<span class="green">"Absolutely Amazing ✨"</span>;
+<span class="green">
+"Absolutely Amazing ✨"
+</span>;
 </p>
 
 <p class="indent">
 <span class="purple">String</span>
 birthday =
-<span class="green">"Best One Ever 🎂"</span>;
+<span class="green">
+"Best One Ever 🎂"
+</span>;
 </p>
 
 <p>}</p>
@@ -651,21 +725,53 @@ Because every great friend deserves... ✨
 <div class="wish-grid">
 
 <div class="wish-card">
-<div class="emoji">✨</div>
-<h3>Unlimited Happiness</h3>
-<p>May your smile never run out of memory.</p>
+
+<div class="emoji">
+✨
 </div>
 
-<div class="wish-card">
-<div class="emoji">🚀</div>
-<h3>Huge Success</h3>
-<p>May all your dreams compile successfully.</p>
+<h3>
+Unlimited Happiness
+</h3>
+
+<p>
+May your smile never run out of memory.
+</p>
+
 </div>
 
+
 <div class="wish-card">
-<div class="emoji">💗</div>
-<h3>Beautiful Memories</h3>
-<p>May life keep adding amazing moments.</p>
+
+<div class="emoji">
+🚀
+</div>
+
+<h3>
+Huge Success
+</h3>
+
+<p>
+May all your dreams compile successfully.
+</p>
+
+</div>
+
+
+<div class="wish-card">
+
+<div class="emoji">
+💗
+</div>
+
+<h3>
+Beautiful Memories
+</h3>
+
+<p>
+May life keep adding amazing moments.
+</p>
+
 </div>
 
 </div>
@@ -674,11 +780,14 @@ Because every great friend deserves... ✨
 
 
 <!-- HEIGHT JOKE -->
+
 <section class="section">
 
 <div class="height-joke">
 
-<div class="big">📏😂</div>
+<div class="big">
+📏😂
+</div>
 
 <h2>
 Important Birthday Announcement
@@ -711,11 +820,14 @@ your friendship status is definitely
 
 
 <!-- PERSONAL MESSAGE -->
+
 <section class="section">
 
 <div class="message-card">
 
-<span class="quote">“</span>
+<span class="quote">
+“
+</span>
 
 <h2>
 A Little Message For You 💌
@@ -769,6 +881,7 @@ and keep being yourself. ✨
 
 
 <!-- CAKE -->
+
 <section class="section cake-section">
 
 <h2 class="section-title">
@@ -787,27 +900,41 @@ Make a wish and blow the candle! 🕯️
 
 <div class="cake">
 
-<div class="icing"></div>
+<div class="icing">
+</div>
 
 <div class="cake-body">
-<span>HAPPY</span>
-<span>BIRTHDAY</span>
-</div>
+
+<span>
+HAPPY
+</span>
+
+<span>
+BIRTHDAY
+</span>
 
 </div>
 
 </div>
+
+</div>
+
 
 <button onclick="makeWish()">
 Make A Wish ✨
 </button>
 
-<p id="wishMessage" class="wish-message"></p>
+
+<p
+id="wishMessage"
+class="wish-message">
+</p>
 
 </section>
 
 
 <!-- FINAL -->
+
 <section class="final-section">
 
 <div class="final-content">
@@ -826,6 +953,7 @@ be filled with happiness, success,
 peace, laughter and unforgettable memories.
 </p>
 
+
 <div class="final-code">
 
 while (life.isBeautiful()) {<br>
@@ -840,13 +968,17 @@ while (life.isBeautiful()) {<br>
 
 </div>
 
+
 <h2>
 🎂 Have an amazing birthday, Aanya! 🎂
 </h2>
 
+
 <p class="signature">
+
 — From the taller CSE friend,
 Jaspreet Singh 😂💻❤️
+
 </p>
 
 </div>
@@ -858,199 +990,105 @@ Jaspreet Singh 😂💻❤️
 
 <script>
 
-/* =================================
-   BIRTHDAY MUSIC
-================================= */
+/* =========================================
+   MUSIC
+========================================= */
 
-let audioContext = null;
+const music =
+    document.getElementById("birthdayMusic");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+
 let musicPlaying = false;
-let musicTimer = null;
-
-const notes = {
-    C4:261.63,
-    D4:293.66,
-    E4:329.63,
-    F4:349.23,
-    G4:392.00,
-    A4:440.00,
-    B4:493.88,
-    C5:523.25,
-    D5:587.33,
-    E5:659.25,
-    F5:698.46,
-    G5:783.99
-};
 
 
-/* Birthday-style melody */
-
-const melody = [
-    ["G4",0.35],
-    ["G4",0.35],
-    ["A4",0.7],
-    ["G4",0.7],
-    ["C5",0.7],
-    ["B4",1.0],
-
-    ["G4",0.35],
-    ["G4",0.35],
-    ["A4",0.7],
-    ["G4",0.7],
-    ["D5",0.7],
-    ["C5",1.0],
-
-    ["G4",0.35],
-    ["G4",0.35],
-    ["G5",0.7],
-    ["E5",0.7],
-    ["C5",0.7],
-    ["B4",0.7],
-    ["A4",1.0],
-
-    ["F5",0.35],
-    ["F5",0.35],
-    ["E5",0.7],
-    ["C5",0.7],
-    ["D5",0.7],
-    ["C5",1.2]
-];
-
-
-function playNote(note,duration,startTime){
-
-    const oscillator =
-        audioContext.createOscillator();
-
-    const gain =
-        audioContext.createGain();
-
-    oscillator.type = "sine";
-
-    oscillator.frequency.value =
-        notes[note];
-
-    oscillator.connect(gain);
-
-    gain.connect(audioContext.destination);
-
-    gain.gain.setValueAtTime(
-        0.0001,
-        startTime
-    );
-
-    gain.gain.exponentialRampToValueAtTime(
-        0.18,
-        startTime + 0.03
-    );
-
-    gain.gain.exponentialRampToValueAtTime(
-        0.0001,
-        startTime + duration
-    );
-
-    oscillator.start(startTime);
-
-    oscillator.stop(
-        startTime + duration + 0.05
-    );
-}
-
-
-function playBirthdayMelody(){
-
-    if(!musicPlaying) return;
-
-    let time =
-        audioContext.currentTime + 0.05;
-
-    melody.forEach(function(item){
-
-        playNote(
-            item[0],
-            item[1],
-            time
-        );
-
-        time += item[1] + 0.05;
-
-    });
-
-    const totalTime =
-        melody.reduce(
-            (sum,item)=>sum+item[1]+0.05,
-            0
-        );
-
-    musicTimer =
-        setTimeout(
-            playBirthdayMelody,
-            totalTime * 1000
-        );
-}
-
+/* Start real MP3 */
 
 function startMusic(){
 
-    if(!audioContext){
+    music.volume = 1.0;
 
-        audioContext =
-            new(
-                window.AudioContext ||
-                window.webkitAudioContext
-            )();
+    music.currentTime = 0;
 
-    }
+    music.play()
+    .then(function(){
 
-    if(audioContext.state === "suspended"){
-        audioContext.resume();
-    }
+        musicPlaying = true;
 
-    musicPlaying = true;
+        musicButton.innerHTML =
+            "🎵 Music ON";
 
-    document.getElementById(
-        "musicButton"
-    ).style.display = "block";
+    })
+    .catch(function(error){
 
-    document.getElementById(
-        "musicButton"
-    ).innerHTML = "🎵 Music ON";
+        console.log(
+            "Music could not start:",
+            error
+        );
 
-    clearTimeout(musicTimer);
+    });
 
-    playBirthdayMelody();
 }
 
+
+/* Turn music OFF immediately */
 
 function stopMusic(){
 
+    music.pause();
+
+    music.currentTime = 0;
+
     musicPlaying = false;
 
-    clearTimeout(musicTimer);
+    musicButton.innerHTML =
+        "🔇 Music OFF";
 
-    document.getElementById(
-        "musicButton"
-    ).innerHTML = "🔇 Music OFF";
 }
 
+
+/* ON / OFF button */
 
 function toggleMusic(){
 
     if(musicPlaying){
+
         stopMusic();
+
     }else{
-        startMusic();
+
+        music.volume = 1.0;
+
+        music.play()
+        .then(function(){
+
+            musicPlaying = true;
+
+            musicButton.innerHTML =
+                "🎵 Music ON";
+
+        })
+        .catch(function(error){
+
+            console.log(error);
+
+        });
+
     }
 
 }
 
 
-/* =================================
+/* =========================================
    START WEBSITE
-================================= */
+========================================= */
 
 function startWebsite(){
 
-    /* Start birthday music after user click */
+    /* Start real birthday song */
+
     startMusic();
 
 
@@ -1069,25 +1107,39 @@ function startWebsite(){
 
     setTimeout(function(){
 
-        intro.style.display = "none";
+        intro.style.display =
+            "none";
 
-        main.classList.remove("hidden");
+        main.classList.remove(
+            "hidden"
+        );
+
+
+        /* Show music button */
+
+        musicButton.style.display =
+            "block";
+
 
         window.scrollTo({
+
             top:0,
+
             behavior:"smooth"
+
         });
 
-        createConfetti(100);
+
+        createConfetti(120);
 
     },1000);
 
 }
 
 
-/* =================================
+/* =========================================
    MAKE WISH
-================================= */
+========================================= */
 
 function makeWish(){
 
@@ -1095,10 +1147,13 @@ function makeWish(){
         document.getElementById("flame");
 
     const message =
-        document.getElementById("wishMessage");
+        document.getElementById(
+            "wishMessage"
+        );
 
 
-    flame.style.display = "none";
+    flame.style.display =
+        "none";
 
 
     message.innerHTML =
@@ -1110,18 +1165,20 @@ function makeWish(){
 }
 
 
-/* =================================
+/* =========================================
    CONFETTI
-================================= */
+========================================= */
 
 function createConfetti(amount){
 
-    const colors=[
+    const colors = [
+
         "#ff4fa3",
         "#a66cff",
         "#66d9ff",
         "#ffd166",
         "#86efac"
+
     ];
 
 
@@ -1146,6 +1203,7 @@ function createConfetti(amount){
 
         confetti.style.width =
             size+"px";
+
 
         confetti.style.height =
             size*1.5+"px";
@@ -1186,18 +1244,6 @@ function createConfetti(amount){
     }
 
 }
-
-
-/* =================================
-   CONSOLE MESSAGE
-================================= */
-
-console.log(
-    "%c💗 HAPPY BIRTHDAY AANYA 💗\n\n"+
-    "Developer: Jaspreet Singh 😂💻\n"+
-    "Height comparison: 404 Not Found 😭",
-    "color:#ff4fa3;font-size:18px;font-weight:bold;"
-);
 
 </script>
 
